@@ -10,6 +10,7 @@
 #import "ItemSectionAdapter.h"
 #import <IGListKit.h>
 #import "ItemSectionCell.h"
+#import "EmptyAdapter.h"
 
 @interface HorizontalSectionAdapter ()
 <
@@ -17,6 +18,7 @@
 >
 @property (nonatomic, strong) IGListAdapter *adapter;
 @property (nonatomic, strong) IGListAdapterUpdater *adapterUpdater;
+@property (nonatomic, strong) EmptyAdapter *emptyView;
 @end
 
 @implementation HorizontalSectionAdapter
@@ -38,11 +40,15 @@
 }
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
-    return @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10"];
+//    return @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10"];
+    return @[];
 }
 
 - (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
-    return nil;
+    UILabel *text = [UILabel new];
+    text.text = @"This is Empty!";
+    text.textAlignment = NSTextAlignmentCenter;
+    return text;
 }
 
 #pragma mark - Lazy
@@ -59,6 +65,13 @@
         _adapterUpdater = [IGListAdapterUpdater new];
     }
     return _adapterUpdater;
+}
+
+- (EmptyAdapter *)emptyView {
+    if (!_emptyView) {
+        _emptyView = [[EmptyAdapter alloc] initWithFrame:CGRectMake(0, 0, self.collectionContext.containerSize.width, self.collectionContext.containerSize.height)];
+    }
+    return _emptyView;
 }
 
 @end

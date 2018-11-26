@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3707DB7521AC4BD10017F265 /* EmptyAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707DB7421AC4BD10017F265 /* EmptyAdapter.m */; };
+		3707DB7A21AC54420017F265 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707DB7921AC54420017F265 /* BaseModel.m */; };
+		3707DB7D21AC54590017F265 /* TextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3707DB7C21AC54590017F265 /* TextModel.m */; };
 		379156FC21AA7C5F00E2CA0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 379156FB21AA7C5F00E2CA0D /* AppDelegate.m */; };
 		379156FF21AA7C5F00E2CA0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379156FE21AA7C5F00E2CA0D /* ViewController.m */; };
 		3791570221AA7C5F00E2CA0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3791570021AA7C5F00E2CA0D /* Main.storyboard */; };
@@ -49,6 +52,12 @@
 		0A7775DB5E5A6D5D8A04F02F /* Pods-IGListDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListDemoUITests/Pods-IGListDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0CF43241D91AD2275395CFFD /* Pods-IGListDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListDemo/Pods-IGListDemo.release.xcconfig"; sourceTree = "<group>"; };
 		36095DA96ED5F88836A3FE98 /* Pods-IGListDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListDemoTests/Pods-IGListDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3707DB7321AC4BD10017F265 /* EmptyAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyAdapter.h; sourceTree = "<group>"; };
+		3707DB7421AC4BD10017F265 /* EmptyAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyAdapter.m; sourceTree = "<group>"; };
+		3707DB7821AC54420017F265 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		3707DB7921AC54420017F265 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		3707DB7B21AC54590017F265 /* TextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextModel.h; sourceTree = "<group>"; };
+		3707DB7C21AC54590017F265 /* TextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextModel.m; sourceTree = "<group>"; };
 		379156F721AA7C5F00E2CA0D /* IGListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379156FA21AA7C5F00E2CA0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		379156FB21AA7C5F00E2CA0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +136,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3707DB7721AC54210017F265 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3707DB7821AC54420017F265 /* BaseModel.h */,
+				3707DB7921AC54420017F265 /* BaseModel.m */,
+				3707DB7B21AC54590017F265 /* TextModel.h */,
+				3707DB7C21AC54590017F265 /* TextModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		379156EE21AA7C5F00E2CA0D = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +172,7 @@
 		379156F921AA7C5F00E2CA0D /* IGListDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3707DB7721AC54210017F265 /* Model */,
 				3791573921AA80FC00E2CA0D /* Cells */,
 				3791573821AA80EB00E2CA0D /* Adapters */,
 				379156FA21AA7C5F00E2CA0D /* AppDelegate.h */,
@@ -198,6 +219,8 @@
 				3791573621AA7FDA00E2CA0D /* HorizontalSectionAdapter.m */,
 				3791574321AA8C0A00E2CA0D /* ItemSectionAdapter.h */,
 				3791574421AA8C0A00E2CA0D /* ItemSectionAdapter.m */,
+				3707DB7321AC4BD10017F265 /* EmptyAdapter.h */,
+				3707DB7421AC4BD10017F265 /* EmptyAdapter.m */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -434,11 +457,14 @@
 				3791573F21AA81D300E2CA0D /* TextViewCell.m in Sources */,
 				3791574821AA8FCA00E2CA0D /* ItemSectionCell.m in Sources */,
 				3791570A21AA7C6000E2CA0D /* main.m in Sources */,
+				3707DB7D21AC54590017F265 /* TextModel.m in Sources */,
 				3791573121AA7FA200E2CA0D /* ImageSectionAdapter.m in Sources */,
 				3791573421AA7FB400E2CA0D /* ListSectionAdapter.m in Sources */,
 				3791572E21AA7F8D00E2CA0D /* TextSectionAdapter.m in Sources */,
+				3707DB7A21AC54420017F265 /* BaseModel.m in Sources */,
 				3791574221AA81E700E2CA0D /* ImageViewCell.m in Sources */,
 				379156FC21AA7C5F00E2CA0D /* AppDelegate.m in Sources */,
+				3707DB7521AC4BD10017F265 /* EmptyAdapter.m in Sources */,
 				3791574521AA8C0A00E2CA0D /* ItemSectionAdapter.m in Sources */,
 				3791573721AA7FDA00E2CA0D /* HorizontalSectionAdapter.m in Sources */,
 			);

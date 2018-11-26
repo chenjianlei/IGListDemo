@@ -28,4 +28,8 @@
     NSLog(@"list -- %ld", index);
 }
 
+- (BOOL)canMoveItemAtIndex:(NSInteger)index {
+    return (index == 3);
+}
+
 @end
